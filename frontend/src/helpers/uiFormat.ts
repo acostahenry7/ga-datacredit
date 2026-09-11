@@ -85,16 +85,14 @@ export function currencyFormat(input: number, options: currencyFormatOptions) {
     return input;
   }
 
-  let opts = {
-    style: "currency",
-    currency: "DOP",
+  const opts: Intl.NumberFormatOptions = {
     minimumFractionDigits: options.fractionDigits ?? 2,
     maximumFractionDigits: options.fractionDigits ?? 2,
   };
 
-  if (options.showCurrencySign == false) {
-    opts.style = undefined;
-    opts.currency = undefined;
+  if (options.showCurrencySign != false) {
+    opts.style = "currency";
+    opts.currency = "DOP";
   }
 
   return new Intl.NumberFormat("es-DO", opts).format(input);

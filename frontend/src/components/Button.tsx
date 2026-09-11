@@ -31,7 +31,7 @@ const Button = ({
   return (
     <button
       onClick={onClick}
-      type={"button" || type}
+      type={type || "button"}
       style={{ width: width || "172px", height: height || "40px" }}
       className={`relative flex items-center justify-center gap-2 font-poppins font-normal border-2 rounded-full duration-200 ${
         variants[variant || "light"]

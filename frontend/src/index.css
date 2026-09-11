@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+body {
+  background-color: #f2f5ff;
+}
+
+@theme {
+  /* fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+
+  /* colors */
+  --color-primary: #000000;
+  --color-light-blue: #f2f5ff;
+  --color-text-gray: #828080;
+  --color-text-primary: #313131;
+  --color-dark-gray: #635e5e;
+
+  /* font sizes + line heights */
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+
+  --text-base: 16px;
+  --text-base--line-height: 19.5px;
+
+  --text-lg: 18px;
+  --text-lg--line-height: 21.94px;
+
+  --text-xl: 20px;
+  --text-xl--line-height: 24.38px;
+
+  --text-2xl: 24px;
+  --text-2xl--line-height: 29.26px;
+
+  --text-3xl: 28px;
+  --text-3xl--line-height: 50px;
+
+  --text-4xl: 48px;
+  --text-4xl--line-height: 58px;
+
+  --text-8xl: 96px;
+  --text-8xl--line-height: 106px;
+
+  /* shadow */
+  --shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* breakpoint */
+  --breakpoint-wide: 1440px;
+
+  /* animations */
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
+  --animate-fadeIn7: fadeIn7 0.3s ease-in-out forwards;
+  --animate-fadeOut: fadeOut 0.5s ease-in-out forwards;
+  --animate-moveIn: moveIn 0.5s ease-in-out forwards;
+  --animate-moveOut: moveOut 0.5s ease-in-out forwards;
+}
+
+@layer components {
+  .input-wrapper {
+    @apply w-full flex flex-col;
+  }
+
+  .input {
+    @apply h-[55px] lg:w-[372px] w-full bg-transparent border border-slate-300 rounded-full placeholder:text-[#828080] text-lg px-4 font-semibold tracking-wider  focus:outline-slate-400  focus:outline-2  box-border;
+  }
+
+  .form-section {
+    @apply flex-1 py-2.5 min-w-[250px] px-0.5;
+  }
+
+  .form-label {
+    @apply text-text-primary font-roboto font-medium tracking-wide;
+  }
+
+  .form-input {
+    @apply mt-1.5 rounded-2xl border border-[#D4D4D4] w-full bg-transparent font-roboto h-[52px] focus:outline-blue-300 active:outline-blue-300 outline-offset-2 text-[#928C8C] px-5 font-medium tracking-wide box-border;
+  }
+
+  .input-error {
+    @apply ml-4 text-red-500 font-medium absolute mt-[54px] text-sm;
+  }
+
+  .input-disabled {
+    @apply bg-slate-200;
+  }
+
+  .filter-input {
+    @apply sm:w-max h-[40px] bg-transparent border px-5 rounded-full mt-1 border-[#d4d4d4] box-border text-[#928C8C] focus:outline-blue-300 active:outline-blue-300;
+  }
+}
+
+@layer utilities {
+  .padding-wide {
+    @apply sm:px-12 xl:px-24 px-6 sm:py-6 py-6;
+  }
+
+  .padding {
+    @apply sm:px-12 px-6 sm:py-6 py-6;
+  }
+
+  .padding-x {
+    @apply sm:px-12 px-6;
+  }
+
+  .padding-y {
+    @apply sm:py-12 py-6;
+  }
+
+  .padding-l {
+    @apply sm:pl-16 pl-8;
+  }
+
+  .padding-r {
+    @apply sm:pr-16 pr-8;
+  }
+
+  .padding-t {
+    @apply sm:pt-24 pt-12;
+  }
+
+  .padding-b {
+    @apply sm:pb-24 pb-12;
+  }
+}
